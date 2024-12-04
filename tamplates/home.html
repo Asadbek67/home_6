@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Autosalon</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Autosalon</h1>
+        <h2>Brands:</h2>
+        <ul class="list">
+            {% for brand in brands %}
+                <li><a href="{% url 'brand_detail' brand.id %}">{{ brand.name }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <h2>Cars:</h2>
+        <ul class="list">
+            {% for car in cars %}
+                <li><a href="{% url 'car_detail' car.id %}">{{ car.model_name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

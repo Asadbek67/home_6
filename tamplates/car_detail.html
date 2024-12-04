@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ car.model_name }}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ car.model_name }} ({{ car.year }})</h1>
+        <p>{{ car.description }}</p>
+        <p>Price: ${{ car.price }}</p>
+
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
